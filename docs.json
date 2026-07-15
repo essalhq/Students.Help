@@ -1,72 +1,295 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+  "name": "Essal Help Center",
+  "logo": {
+    "light": "/logo/logo.svg",
+    "dark": "/logo/logo.svg",
+    "href": "https://essal.dz"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#007BFF",
+    "light": "#3D9BFF",
+    "dark": "#001856"
+  },
+  "background": {
+    "style": "grid"
+  },
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": false
+  },
+  "topbarLinks": [
+    {
+      "name": "Essal.dz",
+      "url": "https://essal.dz"
+    },
+    {
+      "name": "Support",
+      "url": "mailto:support@essal.dz"
+    }
+  ],
   "navigation": {
-    "pages": [
+    "languages": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "Technical Setup",
+            "groups": [
+              {
+                "group": "Installation & Access",
+                "pages": [
+                  "technical/pwa-install",
+                  "technical/android-app",
+                  "technical/troubleshooting"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Academic Rules",
+            "groups": [
+              {
+                "group": "Academic Policies",
+                "pages": [
+                  "academics/grading-exams",
+                  "academics/attendance",
+                  "academics/certifications"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Courses & Programs",
+            "groups": [
+              {
+                "group": "Our Courses",
+                "pages": [
+                  "courses/it-courses",
+                  "courses/business-courses",
+                  "courses/language-courses"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Student Portal",
+            "groups": [
+              {
+                "group": "Portal Guides",
+                "pages": [
+                  "portal/overview",
+                  "portal/student-guide"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Student Services",
+            "groups": [
+              {
+                "group": "Administrative & Careers",
+                "pages": [
+                  "services/admin-procedures",
+                  "services/internships",
+                  "services/support"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "ar",
+        "tabs": [
+          {
+            "tab": "الإعداد التقني",
+            "groups": [
+              {
+                "group": "التثبيت والولوج",
+                "pages": [
+                  "ar/technical/pwa-install",
+                  "ar/technical/android-app",
+                  "ar/technical/troubleshooting"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "القوانين الأكاديمية",
+            "groups": [
+              {
+                "group": "السياسات الأكاديمية",
+                "pages": [
+                  "ar/academics/grading-exams",
+                  "ar/academics/attendance",
+                  "ar/academics/certifications"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "الدورات والبرامج",
+            "groups": [
+              {
+                "group": "البرامج التدريبية",
+                "pages": [
+                  "ar/courses/it-courses",
+                  "ar/courses/business-courses",
+                  "ar/courses/language-courses"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "بوابة الطالب",
+            "groups": [
+              {
+                "group": "أدلة البوابة",
+                "pages": [
+                  "ar/portal/overview",
+                  "ar/portal/student-guide"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "خدمات الطلاب",
+            "groups": [
+              {
+                "group": "الإدارة والمسار المهني",
+                "pages": [
+                  "ar/services/admin-procedures",
+                  "ar/services/internships",
+                  "ar/services/support"
+                ]
+              }
+            ]
+          }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
+  },
+  "footerSocials": {
+    "instagram": "https://instagram.com/essal.institute",
+    "youtube": "https://youtube.com/@essal.institute"
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+      "instagram": "https://instagram.com/essal.institute",
+      "youtube": "https://youtube.com/@essal.institute"
+    },
+    "links": [
+      {
+        "title": "Training Programs",
+        "items": [
+          {
+            "label": "General Training",
+            "href": "https://essal.dz/trainings"
+          },
+          {
+            "label": "Corporate Training",
+            "href": "https://essal.dz/corporate"
+          },
+          {
+            "label": "Languages Training",
+            "href": "https://essal.dz/languages"
+          },
+          {
+            "label": "All Courses",
+            "href": "https://essal.dz/trainings"
+          }
+        ]
+      },
+      {
+        "title": "Student Life",
+        "items": [
+          {
+            "label": "Student Portal",
+            "href": "https://app.essal.institute"
+          },
+          {
+            "label": "Student Guidelines",
+            "href": "https://guidelines.essal.dz"
+          },
+          {
+            "label": "Alumni Network",
+            "href": "https://essal.dz/alumni"
+          },
+          {
+            "label": "Careers",
+            "href": "https://careers.essal.dz"
+          }
+        ]
+      },
+      {
+        "title": "Institute",
+        "items": [
+          {
+            "label": "About Us",
+            "href": "https://essal.dz/about"
+          },
+          {
+            "label": "Accreditations",
+            "href": "https://essal.dz/accreditations"
+          },
+          {
+            "label": "Partnerships",
+            "href": "https://essal.dz/partnerships"
+          },
+          {
+            "label": "Hire Students",
+            "href": "https://essal.dz/hire-students"
+          },
+          {
+            "label": "Accelerator",
+            "href": "https://accelerator.essal.dz"
+          },
+          {
+            "label": "Brand Guidelines",
+            "href": "https://brand.essal.dz"
+          },
+          {
+            "label": "Contact Us",
+            "href": "https://essal.dz/contact"
+          }
+        ]
+      },
+      {
+        "title": "Resources",
+        "items": [
+          {
+            "label": "Help Center",
+            "href": "https://help.essal.dz/"
+          },
+          {
+            "label": "Feedback",
+            "href": "https://feedback.essal.dz/"
+          },
+          {
+            "label": "Office Portal",
+            "href": "https://login.microsoftonline.com/?whr=essal.edu.dz"
+          },
+          {
+            "label": "Certifications",
+            "href": "https://certificates.essal.dz/"
+          },
+          {
+            "label": "Blog",
+            "href": "https://essal.dz/blog"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "https://legal.essal.dz/privacy"
+          },
+          {
+            "label": "Terms of Use",
+            "href": "https://legal.essal.dz/terms"
+          }
+        ]
+      }
+    ]
   }
 }

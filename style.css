@@ -1,0 +1,169 @@
+/* Hide Powered by Mintlify footer attribution */
+a[href*="mintlify.com?utm_campaign=poweredBy"] {
+  display: none !important;
+}
+
+/* Right-to-Left (RTL) Layout support for Arabic */
+html[lang^="ar"],
+[data-current-path^="/ar/"],
+[data-current-path^="/ar"] {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Force child elements to respect text alignment */
+html[lang^="ar"] h1,
+html[lang^="ar"] h2,
+html[lang^="ar"] h3,
+html[lang^="ar"] h4,
+html[lang^="ar"] h5,
+html[lang^="ar"] h6,
+html[lang^="ar"] p,
+html[lang^="ar"] ul,
+html[lang^="ar"] ol,
+html[lang^="ar"] li,
+html[lang^="ar"] blockquote,
+html[lang^="ar"] table,
+html[lang^="ar"] figcaption,
+html[lang^="ar"] .prose,
+html[lang^="ar"] .text-left {
+  text-align: right !important;
+}
+
+/* Flip sidebar (fixed #sidebar element) to the right side */
+@media (min-width: 1024px) {
+  html[lang^="ar"] #sidebar,
+  [data-current-path^="/ar/"] #sidebar,
+  [data-current-path^="/ar"] #sidebar {
+    right: 0 !important;
+    left: auto !important;
+  }
+
+  /* Add right margin to the main content container (NOT #body-content, which fights
+     Tailwind's peer selector). This pushes all content clear of the right-side sidebar
+     without touching the existing Tailwind padding-left on #body-content. */
+  html[lang^="ar"] #content-container,
+  [data-current-path^="/ar/"] #content-container,
+  [data-current-path^="/ar"] #content-container {
+    margin-right: 14rem !important;
+    margin-left: 0 !important;
+  }
+
+  /* Reset content-area margins: let mx-auto center within the adjusted container */
+  html[lang^="ar"] #content-area,
+  [data-current-path^="/ar/"] #content-area,
+  [data-current-path^="/ar"] #content-area {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Ensure the footer remains LTR-aligned */
+html[lang^="ar"] footer,
+html[lang^="ar"] #footer,
+[data-current-path^="/ar"] footer,
+[data-current-path^="/ar"] #footer {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Heading anchor link adjustments (flip position from left to right of headings) */
+html[lang^="ar"] a[href^="#"].-ml-10,
+[data-current-path^="/ar"] a[href^="#"].-ml-10 {
+  margin-right: -2.5rem !important;
+  margin-left: 0 !important;
+}
+
+/* Flip standard margins for spacing inside flex containers */
+html[lang^="ar"] .mr-2, [data-current-path^="/ar"] .mr-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+html[lang^="ar"] .mr-3, [data-current-path^="/ar"] .mr-3 { margin-left: 0.75rem !important; margin-right: 0 !important; }
+html[lang^="ar"] .mr-4, [data-current-path^="/ar"] .mr-4 { margin-left: 1rem !important; margin-right: 0 !important; }
+html[lang^="ar"] .ml-2, [data-current-path^="/ar"] .ml-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+html[lang^="ar"] .ml-3, [data-current-path^="/ar"] .ml-3 { margin-right: 0.75rem !important; margin-left: 0 !important; }
+html[lang^="ar"] .ml-4, [data-current-path^="/ar"] .ml-4 { margin-right: 1rem !important; margin-left: 0 !important; }
+
+/* Flip chevron and arrow icons for RTL navigation */
+html[lang^="ar"] .rotate-90,
+[data-current-path^="/ar"] .rotate-90 {
+  transform: rotate(270deg) !important;
+}
+
+/* Cards layout support: ensure correct padding and flex alignment */
+html[lang^="ar"] .card,
+[data-current-path^="/ar"] .card {
+  text-align: right !important;
+}
+
+/* =====================================================
+   Bullet points (ul/ol): flip indentation to the right
+   Must target .prose explicitly to override Tailwind
+   Typography's higher-specificity padding-left rules.
+   list-style-position: inside puts the marker inside
+   the text flow so direction: rtl places it on the right.
+   ===================================================== */
+html[lang^="ar"] .prose ul,
+html[lang^="ar"] .prose ol,
+html[lang^="ar"] [class*="prose"] ul,
+html[lang^="ar"] [class*="prose"] ol,
+html[lang^="ar"] ul,
+html[lang^="ar"] ol,
+[data-current-path^="/ar"] .prose ul,
+[data-current-path^="/ar"] .prose ol,
+[data-current-path^="/ar"] [class*="prose"] ul,
+[data-current-path^="/ar"] [class*="prose"] ol,
+[data-current-path^="/ar"] ul,
+[data-current-path^="/ar"] ol {
+  padding-left: 0 !important;
+  padding-right: 1.625em !important;
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+html[lang^="ar"] .prose li,
+html[lang^="ar"] [class*="prose"] li,
+html[lang^="ar"] li,
+[data-current-path^="/ar"] .prose li,
+[data-current-path^="/ar"] [class*="prose"] li,
+[data-current-path^="/ar"] li {
+  text-align: right !important;
+  direction: rtl !important;
+  /* Place marker inline with RTL text so it appears on the right */
+  list-style-position: inside !important;
+}
+
+/* Nested lists */
+html[lang^="ar"] ul ul,
+html[lang^="ar"] ul ol,
+html[lang^="ar"] ol ul,
+html[lang^="ar"] ol ol,
+[data-current-path^="/ar"] ul ul,
+[data-current-path^="/ar"] ul ol,
+[data-current-path^="/ar"] ol ul,
+[data-current-path^="/ar"] ol ol {
+  padding-left: 0 !important;
+  padding-right: 1.625em !important;
+}
+
+/* =====================================================
+   Tables: right-align all cell content for RTL
+   Also fix the overflow scroll container direction
+   ===================================================== */
+html[lang^="ar"] table,
+[data-current-path^="/ar"] table {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+html[lang^="ar"] th,
+html[lang^="ar"] td,
+[data-current-path^="/ar"] th,
+[data-current-path^="/ar"] td {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Fix the scroll area that wraps tables — ensure it opens from the right */
+html[lang^="ar"] [data-component-part="scroll-area-viewport"]:has(table),
+[data-current-path^="/ar"] [data-component-part="scroll-area-viewport"]:has(table) {
+  direction: rtl !important;
+}

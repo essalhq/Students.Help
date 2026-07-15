@@ -1,0 +1,51 @@
+---
+title: "Android App Installation"
+description: "How to download, configure, and install the native Android application (APK) for the Essal Student Portal."
+---
+
+In addition to the PWA version, Essal Institute distributes a native Android application package (`.apk`) built with Capacitor. This application includes native performance optimizations and integration with Android's built-in push notification system.
+
+## Application Details
+
+* **Package Name:** `dz.essal.institute`
+* **App Name:** Essal Mobile
+* **Prerequisites:** Android 8.0 (Oreo) or higher.
+
+---
+
+## Installation Steps (APK)
+
+Since the app is distributed directly by the Institute's IT division, you must perform a manual installation (side-loading) of the APK file:
+
+### Step 1: Download the APK
+1. Log in to the [Student Portal](https://app.essal.institute) on your mobile browser.
+2. Navigate to **Technical Setup & Downloads**.
+3. Tap **Download Essal Android App (APK)** to download the latest release build.
+
+### Step 2: Enable Installation from Unknown Sources
+To secure your Android device, installations from outside the Google Play Store are disabled by default. You must temporarily enable this for your browser or file manager:
+1. Open the downloaded APK file.
+2. If a warning prompt appears saying *"For security, your phone is not allowed to install unknown apps from this source"*, tap **Settings**.
+3. Toggle the option **Allow from this source** to ON.
+4. Tap the Back button.
+
+### Step 3: Install the App
+1. Tap **Install** on the installation prompt.
+2. Wait for the packaging installation to complete.
+3. Once installed, tap **Open** to launch Essal Mobile.
+
+---
+
+## Enabling Push Notifications
+
+To receive real-time notifications for schedule updates, exam schedules, and attendance alerts:
+1. Upon the first launch, the app will request permission: *"Allow Essal Mobile to send you notifications?"*.
+2. Tap **Allow**.
+3. If you accidentally denied permission, go to your phone's **Settings → Apps → Essal Mobile → Notifications** and toggle **Show Notifications** to ON.
+
+---
+
+## Technical Configuration (For Admin/IT)
+If you are an administrator preparing an Android build update:
+* Google Play Console deployments require the signed Android App Bundle (`.aab`) located in `android/app/release/app-release.aab`.
+* The Firebase backend configuration must register the app ID `dz.essal.institute` and maintain the `FIREBASE_SERVICE_ACCOUNT` credentials on the web server to dispatch notifications successfully via Firebase Cloud Messaging (FCM).
