@@ -39,13 +39,19 @@ html[lang^="ar"] .text-left {
     left: auto !important;
   }
 
-  /* Add right margin to the main content container (NOT #body-content, which fights
-     Tailwind's peer selector). This pushes all content clear of the right-side sidebar
-     without touching the existing Tailwind padding-left on #body-content. */
+  /* Reset the left padding on the body content since the sidebar is flipped to the right */
+  html[lang^="ar"] #body-content,
+  [data-current-path^="/ar/"] #body-content,
+  [data-current-path^="/ar"] #body-content {
+    padding-left: 0 !important;
+  }
+
+  /* Add right margin to the main content container. This pushes all content clear of the
+     right-side sidebar now that the LTR padding-left on #body-content has been reset. */
   html[lang^="ar"] #content-container,
   [data-current-path^="/ar/"] #content-container,
   [data-current-path^="/ar"] #content-container {
-    margin-right: 14rem !important;
+    margin-right: 16rem !important;
     margin-left: 0 !important;
   }
 
