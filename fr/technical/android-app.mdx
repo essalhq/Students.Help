@@ -1,0 +1,51 @@
+---
+title: "Installation de l'Application Android"
+description: "Comment télécharger, configurer et installer l'application Android native (APK) pour le Portail Étudiant d'Essal."
+---
+
+En plus de la version PWA, l'Institut Essal distribue un package d'application Android natif (`.apk`) développé avec Capacitor. Cette application comprend des optimisations de performances natives et s'intègre au système de notifications push natif d'Android.
+
+## Détails de l'Application
+
+* **Nom du package :** `dz.essal.institute`
+* **Nom de l'application :** Essal Mobile
+* **Prérequis :** Android 8.0 (Oreo) ou version supérieure.
+
+---
+
+## Étapes d'Installation (APK)
+
+L'application étant distribuée directement par le service informatique de l'Institut, vous devez effectuer une installation manuelle (chargement latéral / side-loading) du fichier APK :
+
+### Étape 1 : Télécharger l'APK
+1. Connectez-vous au [Portail Étudiant](https://app.essal.institute) sur votre navigateur mobile.
+2. Naviguez vers **Configuration Technique & Téléchargements**.
+3. Appuyez sur **Télécharger l'Application Android Essal (APK)** pour récupérer la dernière version stable.
+
+### Étape 2 : Activer l'Installation depuis des Sources Inconnues
+Pour sécuriser votre appareil Android, l'installation d'applications ne provenant pas du Google Play Store est désactivée par défaut. Vous devez l'activer temporairement pour votre navigateur ou votre gestionnaire de fichiers :
+1. Ouvrez le fichier APK téléchargé.
+2. Si un message d'avertissement s'affiche indiquant *"Pour votre sécurité, votre téléphone n'est pas autorisé à installer des applications inconnues provenant de cette source"*, appuyez sur **Paramètres**.
+3. Activez l'option **Autoriser à partir de cette source**.
+4. Appuyez sur le bouton Retour.
+
+### Étape 3 : Installer l'Application
+1. Appuyez sur **Installer** dans la fenêtre d'installation.
+2. Patientez pendant la fin de l'installation du package.
+3. Une fois installée, appuyez sur **Ouvrir** pour lancer Essal Mobile.
+
+---
+
+## Activer les Notifications Push
+
+Pour recevoir des notifications en temps réel concernant les changements d'emploi du temps, les plannings d'examens et les alertes d'assiduité :
+1. Lors du premier lancement, l'application demandera l'autorisation : *"Autoriser Essal Mobile à vous envoyer des notifications ?"*.
+2. Appuyez sur **Autoriser**.
+3. Si vous avez accidentellement refusé l'autorisation, allez dans les **Paramètres de votre téléphone → Applications → Essal Mobile → Notifications** et activez l'option **Afficher les notifications**.
+
+---
+
+## Configuration Technique (Pour l'Administration/Service Informatique)
+Si vous êtes un administrateur préparant une mise à jour de la build Android :
+* Les déploiements sur Google Play Console nécessitent l'Android App Bundle signé (`.aab`) situé dans `android/app/release/app-release.aab`.
+* La configuration du backend Firebase doit enregistrer l'ID d'application `dz.essal.institute` et conserver les identifiants `FIREBASE_SERVICE_ACCOUNT` sur le serveur web pour distribuer avec succès les notifications via Firebase Cloud Messaging (FCM).

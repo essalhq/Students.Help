@@ -191,6 +191,86 @@
             ]
           }
         ]
+      },
+      {
+        "language": "fr",
+        "tabs": [
+          {
+            "tab": "Accueil",
+            "groups": [
+              {
+                "group": "Aperçu",
+                "pages": [
+                  "fr/index"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Configuration Technique",
+            "groups": [
+              {
+                "group": "Installation & Accès",
+                "pages": [
+                  "fr/technical/pwa-install",
+                  "fr/technical/android-app",
+                  "fr/technical/troubleshooting"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Règles Académiques",
+            "groups": [
+              {
+                "group": "Politiques Académiques",
+                "pages": [
+                  "fr/academics/grading-exams",
+                  "fr/academics/attendance",
+                  "fr/academics/certifications"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Cours & Programmes",
+            "groups": [
+              {
+                "group": "Nos Cours",
+                "pages": [
+                  "fr/courses/it-courses",
+                  "fr/courses/business-courses",
+                  "fr/courses/language-courses"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Portail Étudiant",
+            "groups": [
+              {
+                "group": "Guides du Portail",
+                "pages": [
+                  "fr/portal/overview",
+                  "fr/portal/student-guide"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Services aux Étudiants",
+            "groups": [
+              {
+                "group": "Administration & Carrières",
+                "pages": [
+                  "fr/services/admin-procedures",
+                  "fr/services/internships",
+                  "fr/services/support"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },

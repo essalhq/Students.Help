@@ -1,0 +1,60 @@
+---
+title: "Exigences Techniques & Dépannage"
+description: "Navigateurs pris en charge, dépannage de la connexion, première activation et détails de configuration de session."
+---
+
+Si vous rencontrez des difficultés pour vous connecter ou naviguer sur le **Portail Étudiant d'Essal**, suivez ce guide pour vérifier votre configuration technique.
+
+---
+
+## 1. Navigateurs Web Pris en Charge
+
+Le portail utilise les standards web modernes (HTML5, ES2024, Web Storage, Service Workers) et fonctionne de manière optimale sur les dernières versions de ces navigateurs :
+
+* **Ordinateur de bureau :**
+  - Google Chrome (Version 110+)
+  - Mozilla Firefox (Version 115+)
+  - Microsoft Edge (Version 110+)
+  - Apple Safari (Version 16+)
+* **Mobile :**
+  - Google Chrome pour Android
+  - Apple Safari pour iOS (Requis pour l'installation de la PWA)
+
+> [!WARNING]
+> Le mode de navigation privée n'est pas recommandé. Il peut restreindre l'accès au stockage local, ce qui entraîne une déconnexion automatique lorsque vous actualisez la page ou fermez l'onglet de votre navigateur.
+
+---
+
+## 2. Résolution des Erreurs de Connexion
+
+### "Identifiants Invalides"
+* **Vérifiez l'orthographe :** Assurez-vous qu'il n'y a pas d'espaces à la fin ou de majuscules incorrectes dans votre e-mail.
+* **Vérification du Domaine :** N'oubliez pas que le portail n'accepte que les adresses e-mail se terminant par **@essal.dz** ou **@essal.edu.dz**. Les e-mails personnels (ex. `@gmail.com`, `@yahoo.com`) seront bloqués.
+* **Première Connexion :** S'il s'agit de votre première connexion, vérifiez vos e-mails personnels pour retrouver le mot de passe temporaire généré par l'administration.
+
+### "Compte Non Activé"
+* Cela signifie que la validation de votre dossier d'inscription étudiante par l'administration est en attente.
+* Contactez le bureau d'administration à l'adresse [support@essal.dz](mailto:support@essal.dz) ou présentez-vous au guichet d'accueil pour vérifier l'état de votre dossier.
+
+### Bloqué dans une Boucle de "Modification Obligatoire du Mot de Passe"
+Si le portail vous demande à plusieurs reprises de mettre à jour votre mot de passe sans vous laisser accéder au tableau de bord :
+1. Assurez-vous que votre nouveau mot de passe comporte au moins 8 caractères et contient un mélange de lettres et de chiffres.
+2. Effacez le cache et les cookies de votre navigateur, puis réessayez de vous connecter.
+3. Si le problème persiste, contactez le support informatique dans la salle informatique 1 pour réinitialiser l'état de votre mot de passe.
+
+---
+
+## 3. Cookies et Stockage Local
+
+Le portail utilise des cookies de session sécurisés (gérés par Better Auth) pour vous maintenir connecté.
+
+* **Activer les Cookies :** Votre navigateur doit autoriser les cookies de premier niveau pour `app.essal.institute`. Si les cookies sont bloqués, vous ne pourrez pas vous connecter.
+* **Espace de Stockage :** La PWA stocke les emplois du temps des cours et les notifications localement. Assurez-vous que votre appareil dispose d'au moins 100 Mo d'espace libre pour maintenir les données de l'application synchronisées.
+
+---
+
+## 4. Contacter le Support Informatique
+
+Si vous avez suivi les étapes ci-dessus et que vous ne parvenez toujours pas à accéder à votre compte étudiant :
+* **E-mail :** [support@essal.dz](mailto:support@essal.dz) (Indiquez votre nom complet, votre numéro d'identification d'étudiant et joignez une capture d'écran de l'erreur).
+* **Bureau Informatique sur Site :** Visitez le service informatique situé dans la salle informatique 1 au sein de l'Institut (du samedi au jeudi).
