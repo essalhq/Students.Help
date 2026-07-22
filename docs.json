@@ -43,6 +43,14 @@
                 "pages": [
                   "index"
                 ]
+              },
+              {
+                "group": "Institute Information",
+                "pages": [
+                  "institute/about-essal",
+                  "institute/registration",
+                  "institute/building-life"
+                ]
               }
             ]
           },
@@ -123,6 +131,14 @@
                 "pages": [
                   "ar/index"
                 ]
+              },
+              {
+                "group": "معلومات المعهد",
+                "pages": [
+                  "ar/institute/about-essal",
+                  "ar/institute/registration",
+                  "ar/institute/building-life"
+                ]
               }
             ]
           },
@@ -202,6 +218,14 @@
                 "group": "Aperçu",
                 "pages": [
                   "fr/index"
+                ]
+              },
+              {
+                "group": "Informations sur l'Institut",
+                "pages": [
+                  "fr/institute/about-essal",
+                  "fr/institute/registration",
+                  "fr/institute/building-life"
                 ]
               }
             ]
